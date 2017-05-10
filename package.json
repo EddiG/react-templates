@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "description": "Boilerplate for React app",
   "author": "Eduard Gilmutdinov",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.dev.js"
+  },
+  "devDependencies": {
+    "webpack": "^2.5.1"
+  }
 }

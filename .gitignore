@@ -4,7 +4,7 @@
 /node_modules
 
 # production
-public/**/*.js
+public/static/**
 
 # misc
 .DS_Store
