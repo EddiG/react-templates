@@ -5,7 +5,7 @@
   "author": "Eduard Gilmutdinov",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.config.dev.js --open",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.dev.js"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-hot-loader": "next"
   }
 }

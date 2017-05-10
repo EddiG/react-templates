@@ -1,15 +1,15 @@
 'use strict';
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
 
 process.env.NODE_ENV = 'development';
 
 module.exports = {
-  devtool: 'cheap-inline-module-eval-source-map',
   context: paths.appPath,
   entry: {
-    app: paths.appEntry,
+    app: ['react-hot-loader/patch', paths.appEntry],
   },
   output: {
     path: paths.outputPath,
@@ -21,6 +21,12 @@ module.exports = {
       inject: true,
       template: paths.appHtml,
     }),
+
+    new webpack.HotModuleReplacementPlugin(),
+    // enable HMR globally
+
+    new webpack.NamedModulesPlugin(),
+    // prints more readable module names in the browser console on HMR updates
   ],
   module: {
     rules: [
@@ -30,5 +36,11 @@ module.exports = {
         use: 'babel-loader',
       },
     ],
+  },
+  devtool: false, //'cheap-inline-module-eval-source-map',
+  devServer: {
+    hot: true,
+    contentBase: paths.outputPath,
+    publicPath: '/',
   },
 };
