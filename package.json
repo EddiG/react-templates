@@ -8,6 +8,7 @@
     "build": "webpack --config ./config/webpack.config.dev.js"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.5.1"
   }
 }
