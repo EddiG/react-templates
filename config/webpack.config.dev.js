@@ -1,24 +1,24 @@
 'use strict';
 
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const paths = require('./paths');
 
 process.env.NODE_ENV = 'development';
 
 module.exports = {
-  context: path.resolve(__dirname, '../src'),
+  context: paths.appPath,
   entry: {
-    app: './index',
+    app: paths.appEntry,
   },
   output: {
-    path: path.resolve(__dirname, '../public/'),
+    path: paths.outputPath,
     publicPath: '/',
     filename: 'static/js/[name].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: '../template/index.html',
+      template: paths.appHtml,
     }),
   ],
 };
