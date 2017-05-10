@@ -6,6 +6,7 @@ const paths = require('./paths');
 process.env.NODE_ENV = 'development';
 
 module.exports = {
+  devtool: 'cheap-inline-module-eval-source-map',
   context: paths.appPath,
   entry: {
     app: paths.appEntry,
