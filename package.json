@@ -15,5 +15,8 @@
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.5.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
 }
