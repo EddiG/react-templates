@@ -14,6 +14,9 @@ module.exports = {
     publicPath: '/',
     filename: 'static/js/[name].js',
   },
+  resolve: {
+    modules: [paths.appPath, 'node_modules'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,

@@ -4,6 +4,13 @@
   "env": {
     "browser": true
   },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.config.prod.js"
+      }
+    }
+  },
   "rules": {
     "react/jsx-filename-extension": "off",
     "arrow-parens": "off"
