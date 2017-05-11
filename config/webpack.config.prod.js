@@ -10,7 +10,7 @@ module.exports = {
     app: paths.appEntry,
   },
   output: {
-    path: paths.outputPath,
+    path: paths.appBuild,
     publicPath: '/',
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
