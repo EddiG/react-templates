@@ -1,9 +1,17 @@
 import React from 'react';
 
-const App = () => (
+type Props = {
+  children?: React.Children,
+};
+
+const App = ({ children }: Props) => (
   <div>
-    React App!
+    {children}
   </div>
 );
+
+App.defaultProps = {
+  children: null,
+};
 
 export default App;
