@@ -15,6 +15,9 @@ module.exports = {
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
   },
+  resolve: {
+    modules: [paths.appPath, 'node_modules'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
