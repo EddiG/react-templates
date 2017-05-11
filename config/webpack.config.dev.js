@@ -10,7 +10,7 @@ module.exports = {
     app: ['react-hot-loader/patch', paths.appEntry],
   },
   output: {
-    path: paths.outputPath,
+    path: paths.appDevBuild,
     publicPath: '/',
     filename: 'static/js/[name].js',
   },
@@ -72,7 +72,7 @@ module.exports = {
   devtool: 'eval',
   devServer: {
     hot: true,
-    contentBase: paths.outputPath,
+    contentBase: paths.appDevBuild,
     publicPath: '/',
   },
 };
