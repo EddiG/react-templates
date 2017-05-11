@@ -12,7 +12,8 @@ module.exports = {
   output: {
     path: paths.outputPath,
     publicPath: '/',
-    filename: 'static/js/[name].js',
+    filename: 'static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -60,6 +61,25 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
+      },
+      {
+        exclude: [/\.html$/, /\.js$/, /\.css/, /\.svg$/],
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10 * 1024,
+            name: 'static/media/[name].[hash:8].[ext]',
+          },
+        },
+      },
+      {
+        test: [/\.svg/],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'static/media/[name].[hash:8].[ext]',
+          },
+        },
       },
     ],
   },
