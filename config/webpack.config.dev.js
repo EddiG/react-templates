@@ -37,7 +37,7 @@ module.exports = {
       },
     ],
   },
-  devtool: false, //'cheap-inline-module-eval-source-map',
+  devtool: 'eval',
   devServer: {
     hot: true,
     contentBase: paths.outputPath,
