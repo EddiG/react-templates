@@ -15,6 +15,9 @@ module.exports = {
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
   },
+  resolve: {
+    modules: [paths.appPath, 'node_modules'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
@@ -57,6 +60,15 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
