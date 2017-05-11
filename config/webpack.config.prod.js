@@ -12,7 +12,8 @@ module.exports = {
   output: {
     path: paths.outputPath,
     publicPath: '/',
-    filename: 'static/js/[name].js',
+    filename: 'static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
