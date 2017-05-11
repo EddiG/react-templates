@@ -1,5 +1,3 @@
-'use strict';
-
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
@@ -34,7 +32,10 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'eslint-loader',
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
       },
       {
         test: /\.js$/,
