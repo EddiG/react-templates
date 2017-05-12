@@ -1,1 +1,1 @@
-# Boilerplate for React app
+# React templates
