@@ -7,7 +7,6 @@ function resolve(relativePath) {
 module.exports = {
   appPath: resolve('./src'),
   appEntry: './index',
-  appHtml: resolve('./template/index.html'),
   appDevBuild: resolve('./build-dev'),
   appBuild: resolve('./build'),
 };
