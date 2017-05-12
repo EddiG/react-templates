@@ -16,8 +16,11 @@ The each step of configuration process has been placed in its own branch. The ea
   - > [TODO] Add css-loader, style-loader, postcss
 - `eslint` based on `file-url-css`
   - eslint, eslint-loader, eslint-import-resolver-webpack, eslint-config-airbnb
-- `flow`
-  - flow-bin, babel-eslint
+- `flow` based on `eslint`
+  - flow-bin, babel-eslint  
+  
+  
+Master branch contains configuration that I think useful for creating new React application.
 ## Use
 Clone the repo
 ```bash
