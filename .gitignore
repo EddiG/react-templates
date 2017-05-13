@@ -4,8 +4,8 @@
 /node_modules
 
 # production
-/build
-/build-dev
+/build/**/*.js
+/build-dev/**/*.js
 
 # misc
 .DS_Store

@@ -6,7 +6,7 @@ process.env.NODE_ENV = 'development';
 module.exports = {
   context: paths.appPath,
   entry: {
-    app: ['react-hot-loader/patch', paths.appEntry],
+    app: paths.appEntry,
   },
   output: {
     path: paths.appDevBuild,
@@ -22,12 +22,6 @@ module.exports = {
         NODE_ENV: JSON.stringify('development'),
       },
     }),
-
-    new webpack.HotModuleReplacementPlugin(),
-    // enable HMR globally
-
-    new webpack.NamedModulesPlugin(),
-    // prints more readable module names in the browser console on HMR updates
   ],
   module: {
     rules: [
@@ -39,9 +33,4 @@ module.exports = {
     ],
   },
   devtool: 'eval',
-  devServer: {
-    hot: true,
-    contentBase: paths.appDevBuild,
-    publicPath: '/',
-  },
 };
