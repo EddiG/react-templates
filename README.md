@@ -7,10 +7,13 @@ I wanted to learn deeper how to configure the development environment with Webpa
 The each step of configuration process live in its own branch. The each branch contains working code that can be used as a base for your ideas about how to complete the configuration for your purposes.
 ### Steps
 - `basic`
-  - webpack, webpack-dev-server
+  - webpack
   - babel, babel-loader, babel-preset-es2015, babel-preset-react
-  - react, react-dom, react-hot-loader
-- `html` based on `basic`
+  - react, react-dom
+- `hot-reload` based on `basic`
+  - webpack-dev-server
+  - react-hot-loader
+- `html` based on `hot-reload`
   - html-webpack-plugin
 - `file-url-css` based on `html`
   - file-loader, url-loader
