@@ -22,6 +22,8 @@ The each step of configuration process live in its own branch. The each branch c
   - eslint, eslint-loader, eslint-import-resolver-webpack, eslint-config-airbnb
 - `flow` based on `eslint`
   - flow-bin, babel-eslint
+- `jest` based on `flow`
+  - jest
 
 
 Master branch contains configuration that I think useful for creating new React application.
