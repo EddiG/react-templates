@@ -1,4 +1,4 @@
- React templates
+# React templates
 ## What we need
 ### Basic
 - `webpack` for creating bundles from modules
