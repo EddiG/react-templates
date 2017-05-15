@@ -36,5 +36,12 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "next"
+  },
+  "jest": {
+    "moduleDirectories": ["node_modules", "src"],
+    "transform": {
+      "\\.js$": "babel-jest",
+      "^(?!.*\\.(js)$)": "<rootDir>/config/jest/fileTransformer.js"
+    }
   }
 }
