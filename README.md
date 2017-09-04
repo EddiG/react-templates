@@ -15,4 +15,4 @@ Also we should add below config into `.babelrc` in the root of project
   "presets": [["es2015", { "modules": false }], "react"],
 }
 ```
-> `"modules": false` turn off transpliting the `import/export` ES6 syntax into CommonJS `require` syntax. Because Webpack 2 already support ES6 `import/export` syntax.
+> `"modules": false` turns off transpiling the `import/export` ES6 syntax into CommonJS `require` syntax. Because the Webpack 2 already support ES6 `import/export` syntax.
